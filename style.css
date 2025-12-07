@@ -1,0 +1,70 @@
+ *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1{
+        text-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.28);
+        color: blue;
+        margin: 10px;
+        font-size: 2.5em;
+        font-weight:bolder;
+        text-align: center;
+    }
+    form>p{
+        color: wheat;
+        font-weight: 600;
+        font-size: small;
+        padding: 5px;
+        position: relative;
+        left: 18%;
+    }
+    form > label{
+        font-size: 1.1em;
+        font-weight:700 ;
+        color: aliceblue;
+    }
+    h3{
+        background-color: rgba(255, 255, 255, 0.954);
+        width: auto;
+        height: auto;
+        margin: 0px auto;
+        border-radius: 4px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.411);
+    }
+    form{
+        width: 300px;
+        height: 50px;
+        padding: 30px;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 13px;
+        background-color: blue;
+        box-shadow: 0.5px 0.5px 7px rgba(16, 4, 4, 0.279);
+    }
+    #inSenha{
+        padding: 7px;
+        border-radius: 4px;
+        box-shadow: 1px 0.5px 5px rgba(128, 128, 128, 0.553);
+    }
+    #btnVerificar:hover{
+        color: green;
+        background-color: rgb(162, 226, 67);
+    }
+    #btnVerificar{
+        width: 70px;
+        padding: 7px;
+        font-weight: 600;
+        
+        color: aliceblue;
+        border-style: hidden;
+        outline-width: 0.5px;
+        outline-style:groove ;
+        outline-color: rgb(63, 229, 57);
+        background-color: rgb(35, 215, 35);
+        box-shadow: 1px 0.5px 5px rgba(128, 128, 128, 0.536);
+    }
+
