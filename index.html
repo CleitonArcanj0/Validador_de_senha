@@ -5,19 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Validador de senha</title>
-    <style>
-       
-    </style>
+    
 </head>
 <body>
-    <h1>Valida senha</h1>
     <form>
+        <h1>Força da senha</h1>
         <label for="Senha">Senha:</label>
-        <input type="text" id="inSenha" oninput="contador(this)" maxlength="15" >
+        <input type="password" id="inSenha" oninput="contador(this)" maxlength="15" >
+
         <input type="submit" value="Verificar" id="btnVerificar" >
+
         <p id="pContador"><span id="contador">0</span>/15</p>
-        <h3></h3>
     </form>
+    <div id="regras">
+        <ul>
+            <li id="list_regra1">A senha deve possui 8 a 15 caracteres.</li>
+            <li id="list_regra2">A senha tem que ter no mínimo 1 número.</li>
+            <li id="list_regra3">A senha tem que ter no mínimo 1 letra minúscula.</li>
+            <li id="list_regra4">A senha tem que ter no mínimo 2 letra maiúscula.</li>
+            <li id="list_regra5">A senha tem que ter no mínimo 1 símbolo.</li>
+        </ul>
+    </div>
     <script src="js.js"></script>
 </body>
 </html>
