@@ -1,4 +1,4 @@
-const frm =  window.document.querySelector("form")
+const frm = window.document.querySelector("form")
 const btn = window.document.querySelector("button")
 const list = window.document.querySelector(".list_erro")
 
@@ -10,7 +10,7 @@ const list_minus = window.document.querySelector("#list_regra3")
 const list_maius = window.document.querySelector("#list_regra4")
 const list_simb = window.document.querySelector("#list_regra5")
 
-function contador(campo){
+function contador(campo) {
     const senha = campo.value
     const temNum = senha.match(/[0-9]/g)
     const temMinus = senha.match(/[a-z]/g)
@@ -18,60 +18,57 @@ function contador(campo){
     const temEspeciais = senha.match(/\W/g)
 
 
-    if(senha.length >= 8){
-        list_senha.classList.remove("list_erro");
-        list_senha.classList.add("list_success");
-    } else{
-        list_senha.classList.remove("list_success");
-        list_senha.classList.add("list_erro");
+    if (senha.length >= 8) {
+        verificacao_sucesso(list_senha)
+    } else {
+        verificacao_erro(list_senha)
     }
 
-    if(!(temNum == null)){
-        list_num.classList.remove("list_erro");
-        list_num.classList.add("list_success");
-    }else{
-        list_num.classList.remove("list_success");
-        list_num.classList.add("list_erro");
-    }
-    
-    if(!(temMinus == null)){
-        list_minus.classList.remove("list_erro");
-        list_minus.classList.add("list_success");
-    }else{
-        list_minus.classList.remove("list_success");
-        list_minus.classList.add("list_erro");
+    if (!(temNum == null)) {
+        verificacao_sucesso(list_num)
+    } else {
+        verificacao_erro(list_num)
     }
 
-
-    if(!(temMaius == null || temMaius.length < 2)){
-        list_maius.classList.remove("list_erro");
-        list_maius.classList.add("list_success");
-
-    }else{
-        list_maius.classList.remove("list_success");
-        list_maius.classList.add("list_erro");
+    if (!(temMinus == null)) {
+        verificacao_sucesso(list_minus)
+    } else {
+        verificacao_erro(list_minus)
     }
 
-    if(!(temEspeciais == null)){
-        list_simb.classList.remove("list_erro");
-        list_simb.classList.add("list_success");  
-    }else{
-        list_simb.classList.remove("list_success");
-        list_simb.classList.add("list_erro");
+    if (!(temMaius == null || temMaius.length < 2)) {
+        verificacao_sucesso(list_maius)
+    } else {
+        verificacao_erro(list_maius)
+    }
+
+    if (!(temEspeciais == null)) {
+        verificacao_sucesso(list_simb)
+    } else {
+        verificacao_erro(list_simb)
     }
 }
 
-btn.addEventListener("click", (e)=>{
+btn.addEventListener("click", (e) => {
     mostrarSenha(e)
 })
 
-function mostrarSenha(e){
+function mostrarSenha(e) {
     let input = document.querySelector("#inSenha")
-    if(input.getAttribute('type') == 'password'){
+    if (input.getAttribute('type') == 'password') {
         input.setAttribute('type', 'text')
-    }else{
+    } else {
         input.setAttribute('type', 'password')
     }
-    
+
     e.preventDefault()
+}
+
+const verificacao_sucesso = (classe) => {
+    classe.classList.remove("list_erro");
+    classe.classList.add("list_success");
+}
+const verificacao_erro = (classe) => {
+    classe.classList.remove("list_success");
+    classe.classList.add("list_erro");
 }
