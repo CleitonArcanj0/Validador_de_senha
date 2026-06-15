@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Validador de senha</title>
-    
+
 </head>
+
 <body>
-    <form>
-        <h1>Força da senha</h1>
-        <input type="password" id="inSenha"  placeholder="Senha" oninput="contador(this)" maxlength="15" >
-        <button id="btnMostrar" >Mostrar</button>    
-    </form>
-    <div id="regras">
-        <ul>
-            <li id="list_regra1" class="list_erro">A senha deve possuir entre 8 a 15 caracteres.</li>
-            <li id="list_regra2" class="list_erro">A senha deve ter no mínimo 1 número.</li>
-            <li id="list_regra3" class="list_erro">A senha deve ter no mínimo 1 letra minúscula.</li>
-            <li id="list_regra4" class="list_erro">A senha deve ter no mínimo 2 letras maiúsculas.</li>
-            <li id="list_regra5" class="list_erro">A senha deve ter no mínimo 1 símbolo.</li>
-        </ul>
+
+    <div class="container">
+        <form>
+            <h1>Força da senha</h1>
+            <input type="password" id="inSenha" placeholder="Senha" oninput="contador(this)" maxlength="15">
+            <button id="btnMostrar">Mostrar</button>
+        </form>
+        <div id="regras">
+            <ul>
+                <li id="list_regra1" class="list_erro">A senha deve possuir entre 8 a 15 caracteres.</li>
+                <li id="list_regra2" class="list_erro">A senha deve ter no mínimo 1 número.</li>
+                <li id="list_regra3" class="list_erro">A senha deve ter no mínimo 1 letra minúscula.</li>
+                <li id="list_regra4" class="list_erro">A senha deve ter no mínimo 2 letras maiúsculas.</li>
+                <li id="list_regra5" class="list_erro">A senha deve ter no mínimo 1 símbolo.</li>
+            </ul>
+        </div>
     </div>
+
     <script src="js.js"></script>
 </body>
+
 </html>
